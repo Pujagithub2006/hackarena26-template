@@ -5,7 +5,7 @@ Create database tables for the NutriCalc backend
 
 import asyncio
 from app.core.database import engine
-from app.models.models import *  # Import all models to ensure they're registered
+from app.models.models import *  # Import all models to ensure they are registered
 
 async def main():
     """Create all database tables"""
