@@ -5,9 +5,13 @@
 
 ## Team Details
 
-- **Team Name:**
+- **Team Name: Devnauts**
 - **Members:**
-- **Domain:**
+  - Puja Nikam
+  - Yash Kalaskar
+  - Atharv Dubal
+  - Shloka Pampattiwar
+- **Domain: Health**
 
 ---
 
