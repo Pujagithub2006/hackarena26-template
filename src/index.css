@@ -108,7 +108,7 @@ body {
 }
 .btn-outline:active { background: rgba(182,245,66,0.05); }
 
-/* ── Inputs ── */
+/* ── Inputs ─ */
 .input-group { margin-bottom: 14px; }
 .input-label {
   font-size: 11px;
