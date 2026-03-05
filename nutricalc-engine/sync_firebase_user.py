@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sync existing Firebase user to SQL database
+Sync existing Firebase user to MySQL database
 """
 
 import asyncio
