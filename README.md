@@ -1,59 +1,201 @@
-# VICSTA Hackathon – Grand Finale
-**VIT College, Kondhwa Campus | 5th – 6th March**
+<div align="center">
+
+# NutriSync AI
+### Real-Time Physiological Nutrition Recommendation System
+
+AI-powered nutrition platform that generates **personalized meals, hydration, and exercise plans** based on **live physiological signals and metabolic health indicators.**
+
+Instead of recommending generic calorie-based diets, **NutriSync AI evaluates how food interacts with your body at that moment**, adapting nutrition strategies dynamically using health vitals and medical context.
+
+</div>
 
 ---
 
-## Team Details
+## Why NutriSync?
 
-- **Team Name:** _DevNauts_
-- **Members:** 
-Puja Nikam,
-Yash kalaskar,
-Atharv Dubal,
-Shloka Pampattiwar
+Modern diet applications provide **static meal plans** that ignore real-time physiological signals such as heart rate, stress levels, or oxygen saturation.
 
-- **Domain:** Health
+However, metabolism is **dynamic**. The way the body processes food changes depending on stress, recovery state, physical activity, and medical conditions.
+
+**NutriSync AI solves this problem by combining physiological data with AI-driven reasoning to generate personalized nutrition recommendations optimized for the user's metabolic state.**
 
 ---
 
-## Project
+## Problem Statement
 
-**Problem:** **Most diet apps are manual and generic, you get the same meal suggestions as everyone else, regardless of whether your heart rate is elevated, your blood oxygen is low, or you're diabetic. Calories are treated as equal, even when they're not.Basically the physiological data is not considered while suggesting meals.**
+Most nutrition platforms fail to incorporate **real-time physiological health data** when recommending meals.
 
-**Solution:** **NutriSync AI is a real time nutrition ecosystem that reads your physiological state and recommends meals based on how food will actually interact with your body right now not just how many calories it contains.**
+As a result:
 
-At the core is a **10 parameter dynamic health score** heart rate, SpO₂, HRV, stress, steps, BMI, calorie intake, medical risk, goal alignment, and glycemic index where weights automatically redistribute based on your medical history and live vitals, always summing to 100. This score maps to one of five tiers (Peak → Critical), and each tier sends a completely different prompt to the AI, changing its entire nutritional strategy.
+- Two users with identical calorie targets receive the same meals
+- Medical risks such as diabetes are not properly considered
+- Glycemic response of meals is ignored
+- Nutrition plans fail to adapt to stress, fatigue, or recovery
 
-Every meal comes with a **Glycemic Impact Score** that goes beyond GI and GL it factors in protein buffering, fiber content, anti-spike ingredients, medical conditions, and live vitals like cortisol-glucose interaction during high stress. Two meals with identical calories can score 78 and 31, and the app tells you exactly why.
-
-A **Full Day Plan** generates breakfast, lunch, snack, dinner, an exercise schedule, and a hydration plan in one tap all driven by morning vitals. Everything syncs to the cloud in real time so your profile and diary follow you across devices. The architecture is wearable ready simulated vitals swap to Apple HealthKit or Google Fit with a single API change.
-
----
-
-## Rules to Remember
-
-- All development must happen **during** the hackathon only
-- Push code **regularly** — commit history is monitored
-- Use only open-source libraries with compatible licenses and **credit them**
-- Only **one submission** per team
-- All members must be present **both days**
+This leads to **generic diet recommendations that may not align with the body’s metabolic needs.**
 
 ---
 
-## Attribution
+## Solution Overview
 
-- [React](https://reactjs.org) — Frontend UI framework (MIT License)
-- [Create React App](https://create-react-app.dev) — Project bootstrapping (MIT License)
-- [Express.js](https://expressjs.com) — Proxy server for API key management (MIT License)
-- [Groq API](https://groq.com) — LLaMA 3.1-8b-instant for AI meal, exercise and hydration recommendations
-- [Spoonacular API](https://spoonacular.com/food-api) — Food images for meal cards
-- [Firebase Authentication](https://firebase.google.com) — User login and signup
-- [Firebase Firestore](https://firebase.google.com) — Cloud storage for profiles and food diary
-- [cors](https://www.npmjs.com/package/cors) — Cross-origin request handling (MIT License)
-- [dotenv](https://www.npmjs.com/package/dotenv) — Environment variable management (BSD-2 License)
+NutriSync AI creates a **real-time personalized nutrition ecosystem** that evaluates physiological parameters and generates optimized health plans using an AI recommendation engine.
+
+Instead of simply counting calories, the system evaluates **how food will interact with the user's body based on their current physiological state.**
+
+The platform:
+
+1. Collects physiological and lifestyle signals
+2. Computes a **dynamic metabolic health score**
+3. Maps the user to a **health tier**
+4. Generates personalized **nutrition, hydration, and exercise plans**
 
 ---
 
-> *"The world is not enough, but it is such a perfect place to start."* — James Bond
->
-> All the best to every team. Build something great. 🚀
+# Key Innovations
+
+### 🔷 Dynamic Health Scoring Engine  
+![Health Score](https://img.shields.io/badge/System-Dynamic%2010%20Parameter%20Health%20Score-blue)
+
+NutriSync calculates a real-time health score using **ten physiological and behavioral parameters**:
+
+- Heart Rate
+- SpO₂
+- HRV (Heart Rate Variability)
+- Stress
+- Step Count
+- BMI
+- Calorie Intake
+- Medical Risk
+- Goal Alignment
+- Glycemic Index
+
+The weights of these parameters **automatically redistribute based on medical conditions and real-time vitals**, ensuring the score always sums to **100**.
+
+---
+
+### 🔷 AI Nutrition Recommendation Engine  
+![AI](https://img.shields.io/badge/AI-Groq%20LLM-purple)
+
+The health score categorizes users into **five metabolic tiers**:
+
+- Peak
+- Optimal
+- Balanced
+- Risk
+- Critical
+
+Each tier generates a **different contextual prompt for the AI model**, fundamentally changing the nutrition strategy recommended.
+
+---
+
+### 🔷 Glycemic Impact Analysis  
+![Metabolic Analysis](https://img.shields.io/badge/Model-Glycemic%20Impact%20Score-red)
+
+Beyond traditional **Glycemic Index (GI)** and **Glycemic Load (GL)**, NutriSync computes a **Glycemic Impact Score** that considers:
+
+- Protein buffering
+- Fiber content
+- Anti-spike ingredients
+- Medical conditions
+- Stress-driven cortisol–glucose interaction
+
+Two meals with identical calories can produce **very different metabolic responses**, and the system explains why.
+
+---
+
+### 🔷 Wearable Ready Architecture  
+![Integration](https://img.shields.io/badge/Integration-HealthKit%20%7C%20Google%20Fit-green)
+
+The architecture is designed for **easy integration with wearable health devices**.
+
+Currently simulated vitals can be replaced with real-time health data from:
+
+- Apple HealthKit
+- Google Fit
+- Wearable fitness trackers
+
+with minimal API changes.
+
+---
+
+
+The architecture supports **real-time personalization**, cloud synchronization, and future integration with wearable devices.
+
+---
+
+# Workflow
+
+1. User creates an account and provides personal health details.
+2. Physiological signals are collected from user inputs or wearable integrations.
+3. The system computes a **dynamic health score** using ten parameters.
+4. The score maps the user into a **metabolic health tier**.
+5. A context-aware prompt is generated for the AI model.
+6. The AI generates **meal recommendations, exercise suggestions, and hydration plans**.
+7. Results are stored in the cloud and displayed on the user dashboard.
+
+---
+
+# Tech Stack
+
+| Component | Technology | Purpose |
+|-----------|------------|--------|
+| Frontend | React.js | User interface and dashboard |
+| Backend | Node.js + Express | API server and AI integration |
+| AI Engine | Groq API (LLaMA 3.1) | Nutrition recommendation generation |
+| Authentication | Firebase Authentication | User login and identity management |
+| Database | Firebase Firestore | User profiles and food diary |
+| Food Data | Spoonacular API | Food images and metadata |
+| Config | dotenv | Environment variable management |
+
+---
+
+# Key Features
+
+- Real-time personalized nutrition recommendations
+- Dynamic metabolic health scoring
+- AI-powered meal planning
+- Glycemic impact analysis beyond GI/GL
+- Integrated hydration and exercise planning
+- Cloud-synced user profiles and food diaries
+- Wearable-ready architecture
+
+---
+
+# Future Improvements
+
+Planned enhancements for the system include:
+
+- Integration with **Apple HealthKit and Google Fit**
+- Support for **Continuous Glucose Monitoring (CGM) devices**
+- Advanced ML models for metabolic prediction
+- Micronutrient optimization
+- Real-time nutrition alerts and recommendations
+
+---
+
+# Team
+
+**Team DevNauts**
+
+- Puja Nikam  
+- Yash Kalaskar  
+- Atharv Dubal  
+- Shloka Pampattiwar  
+
+---
+
+# Attribution
+
+| Tool / Library | Purpose |
+|---------------|--------|
+| React | Frontend UI framework |
+| Create React App | Project scaffolding |
+| Express.js | Backend server |
+| Groq API | AI inference engine |
+| Spoonacular API | Food images and metadata |
+| Firebase Authentication | User authentication |
+| Firebase Firestore | Cloud database |
+| cors | Cross-origin request handling |
+| dotenv | Environment variable management |
+
+---
