@@ -7,6 +7,8 @@ AI-powered nutrition platform that generates **personalized meals, hydration, an
 
 Instead of recommending generic calorie-based diets, **NutriSync AI evaluates how food interacts with your body at that moment**, adapting nutrition strategies dynamically using health vitals and medical context.
 
+Deployed Link - https://nutrisyncai.onrender.com/
+
 </div>
 
 ---
